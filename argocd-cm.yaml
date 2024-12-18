@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+  namespace: argocd
+Labels:       
+   app.kubernetes.io/name=argocd-cm
+   app.kubernetes.io/part-of=argocd
+data:
+  # Add local users
+  accounts.user1: apiKey,login
+  accounts.user2: apiKey,login
